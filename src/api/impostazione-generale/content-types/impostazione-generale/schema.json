@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "impostazioni_generali",
+  "info": {
+    "singularName": "impostazione-generale",
+    "pluralName": "impostazioni-generali",
+    "displayName": "impostazione-generale"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome_sito": {
+      "type": "string"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "indirizzo": {
+      "type": "string"
+    },
+    "telefono": {
+      "type": "string"
+    }
+  }
+}

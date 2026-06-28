@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_itinerario_giornos",
+  "info": {
+    "displayName": "giorno"
+  },
+  "options": {},
+  "attributes": {
+    "titolo_giorno": {
+      "type": "string"
+    },
+    "contenuto": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

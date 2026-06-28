@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "abbonamentos",
+  "info": {
+    "singularName": "abbonamento",
+    "pluralName": "abbonamentos",
+    "displayName": "abbonamento"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome_cognome": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "indirizzo": {
+      "type": "string"
+    },
+    "piano": {
+      "type": "enumeration",
+      "enum": [
+        "digital",
+        "carta_digital"
+      ]
+    }
+  }
+}

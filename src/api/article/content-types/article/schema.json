@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "Article"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titolo": {
+      "type": "string"
+    },
+    "rubrica": {
+      "type": "string"
+    },
+    "estratto": {
+      "type": "text"
+    },
+    "immagine": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "destinazione": {
+      "type": "string"
+    },
+    "difficolta": {
+      "type": "enumeration",
+      "enum": [
+        "Facile",
+        "Medio",
+        "Avanzato"
+      ]
+    },
+    "in_evidenza": {
+      "type": "boolean"
+    },
+    "visite": {
+      "type": "integer"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "titolo"
+    }
+  }
+}
