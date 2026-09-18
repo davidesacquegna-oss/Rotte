@@ -703,6 +703,44 @@ export interface ApiItinerarioItinerario extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiPianoAbbonamentoPianoAbbonamento
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'piano_abbonamentos';
+  info: {
+    displayName: 'piano-abbonamento';
+    pluralName: 'piano-abbonamentos';
+    singularName: 'piano-abbonamento';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    caratteristiche: Schema.Attribute.Component<
+      'caratteristica.caratteristiche',
+      true
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    frequenza: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::piano-abbonamento.piano-abbonamento'
+    > &
+      Schema.Attribute.Private;
+    popolare: Schema.Attribute.Boolean;
+    prezzo: Schema.Attribute.Decimal;
+    publishedAt: Schema.Attribute.DateTime;
+    richiedeIndirizzo: Schema.Attribute.Boolean;
+    slug: Schema.Attribute.UID;
+    titolo: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1222,6 +1260,7 @@ declare module '@strapi/strapi' {
       'api::impostazione-generale.impostazione-generale': ApiImpostazioneGeneraleImpostazioneGenerale;
       'api::iscritto-newsletter.iscritto-newsletter': ApiIscrittoNewsletterIscrittoNewsletter;
       'api::itinerario.itinerario': ApiItinerarioItinerario;
+      'api::piano-abbonamento.piano-abbonamento': ApiPianoAbbonamentoPianoAbbonamento;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

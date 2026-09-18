@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "piano_abbonamentos",
+  "info": {
+    "singularName": "piano-abbonamento",
+    "pluralName": "piano-abbonamentos",
+    "displayName": "piano-abbonamento"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titolo": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "prezzo": {
+      "type": "decimal"
+    },
+    "frequenza": {
+      "type": "string"
+    },
+    "popolare": {
+      "type": "boolean"
+    },
+    "richiedeIndirizzo": {
+      "type": "boolean"
+    },
+    "caratteristiche": {
+      "type": "component",
+      "component": "caratteristica.caratteristiche",
+      "repeatable": true
+    }
+  }
+}
