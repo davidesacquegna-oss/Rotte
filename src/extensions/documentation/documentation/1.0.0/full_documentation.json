@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-09-18T08:52:23.806Z"
+    "x-generation-date": "2026-09-21T10:43:46.489Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -7575,6 +7575,14 @@
               "slug": {
                 "type": "string"
               },
+              "latitudine": {
+                "type": "number",
+                "format": "float"
+              },
+              "longitudine": {
+                "type": "number",
+                "format": "float"
+              },
               "locale": {
                 "type": "string"
               },
@@ -8790,6 +8798,14 @@
           "slug": {
             "type": "string"
           },
+          "latitudine": {
+            "type": "number",
+            "format": "float"
+          },
+          "longitudine": {
+            "type": "number",
+            "format": "float"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -9059,6 +9075,14 @@
                 },
                 "slug": {
                   "type": "string"
+                },
+                "latitudine": {
+                  "type": "number",
+                  "format": "float"
+                },
+                "longitudine": {
+                  "type": "number",
+                  "format": "float"
                 },
                 "createdAt": {
                   "type": "string",

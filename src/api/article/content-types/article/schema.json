@@ -50,6 +50,12 @@
     "slug": {
       "type": "uid",
       "targetField": "titolo"
+    },
+    "latitudine": {
+      "type": "decimal"
+    },
+    "longitudine": {
+      "type": "decimal"
     }
   }
 }

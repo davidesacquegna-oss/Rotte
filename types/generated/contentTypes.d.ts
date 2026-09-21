@@ -517,12 +517,14 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     estratto: Schema.Attribute.Text;
     immagine: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     in_evidenza: Schema.Attribute.Boolean;
+    latitudine: Schema.Attribute.Decimal;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::article.article'
     > &
       Schema.Attribute.Private;
+    longitudine: Schema.Attribute.Decimal;
     publishedAt: Schema.Attribute.DateTime;
     rubrica: Schema.Attribute.String;
     slug: Schema.Attribute.UID<'titolo'>;
